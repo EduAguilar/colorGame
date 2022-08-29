@@ -32,7 +32,7 @@ function setUpSquares(){
         resetBtn.textContent="¡Vuelve a jugar!"
         changeColors(clickedColor)
       }else{ //Si el color es incorrecto
-        this.style.background="#232323"
+        this.style.background="#414040"
         messageDisplay.textContent="Intentalo nuevamente"
       } 
     });

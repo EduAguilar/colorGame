@@ -7,40 +7,29 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Ejercicio Color Game">
       <meta name="author" content="Aguilar Uribe Eduardo Alfredo">
-      <link rel="shortcut icon" type="image/x-icon" href="" />
+      <link rel="shortcut icon" type="image/x-icon" href="./favicon.png" />
       <!-- CSS only -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
       <!-- Mi estilo personalizado -->
       <link rel="stylesheet" href="style.css">
     </head>
 <body>
-
     <h1>The Great <br><span id="colorDisplay">rgb ejemplo(74, 32, 222)</span> <br> Guessing Game
     </h1>
-
     <div id="stripe">
       <button id="reset">Nuevos Colores</button>
-      <span id="message"></span>
+      <span id="message" class="pulse-text pulse-grow-on-hover"></span>
       <button id="easyBtn" class="mode ">Fácil</button>
       <button id="hardBtn" class="mode selected">Difícil</button>
     </div>
-
     <div class="container">
-      <div class="square">
-      </div>
-      <div class="square">
-      </div>
-      <div class="square">
-      </div>
-      <div class="square">
-      </div>
-      <div class="square">
-      </div>
-      <div class="square">
-      </div>
+      <div class="square pulse-grow-on-hover"></div>
+      <div class="square pulse-grow-on-hover"></div>
+      <div class="square pulse-grow-on-hover"></div>
+      <div class="square pulse-grow-on-hover"></div>
+      <div class="square pulse-grow-on-hover"></div>
+      <div class="square pulse-grow-on-hover"></div>
     </div>
-  
   <script src="./script.js"></script>
-
 </body>  
 </html>
