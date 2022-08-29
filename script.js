@@ -1,7 +1,7 @@
 let numberOfSquares = 6;
 let square = document.querySelectorAll(".square");
-let colors = generateRandomColors(numberOfSquares);
-let pickedColor = pickColor();
+let colors
+let pickedColor
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.getElementById("message");
 let resetBtn=document.getElementById("reset");
@@ -15,8 +15,8 @@ colorDisplay.textContent=pickedColor
 init()
 /*Inicializo mis funciones*/
 function init(){
-  setUpSquares()
   reset()
+  setUpSquares()
   selectedButton()
 }
 /*Funcion Asignación de color mediante un array colors + evento al presionar un cuadro */
@@ -86,7 +86,7 @@ resetBtn.addEventListener("click",function(){
   reset();
 })
 //Funcion para verificar el modo de juego facil o dificil
-function selectedButton(){
+/* function selectedButton(){
   hardButton.addEventListener("click",function(){
     buttonMode[1].classList.add("selected")
     buttonMode[0].classList.remove("selected")
@@ -99,4 +99,20 @@ function selectedButton(){
     numberOfSquares = 3;
     reset()
   })
+} */
+//Funcion para verificar el modo de juego facil o dificil refactorizada
+function selectedButton(){
+  for (let i = 0; i < buttonMode.length; i++) {
+    buttonMode[i].addEventListener("click", function(){
+      buttonMode[0].classList.remove("selected")
+      buttonMode[1].classList.remove("selected")
+      this.classList.add("selected")
+      if(this.textContent === "Fácil"){
+        numberOfSquares = 3;
+      }else{
+        numberOfSquares = 6;
+      }
+      reset();
+    })
+  }
 }
